@@ -10,17 +10,12 @@ var UsersSchema = new Schema({
         type: String
     },
     password: String,
-    user_type: String,
-    name: String,
-    posts_in: [{type: Schema.Types.ObjectId, ref: 'Posts'}],
+    type: String,
+    name: String
 },{
     timestamps: true
 });
 
-UsersSchema.virtual('date')
-  	.get(function(){
-    	return this._id.getTimestamp();
-  	});
 
 mongoose.model('Users', UsersSchema);
 

@@ -5,14 +5,11 @@ var mongoose = require('mongoose'),
 
 var ArticleSchema = new Schema({
   title: String,
-  url: String,
-  text: String
+  texte: String,
+  url: String
 });
 
-ArticleSchema.virtual('date')
-  .get(function(){
-    return this._id.getTimestamp();
-  });
+
 
 mongoose.model('Article', ArticleSchema);
 

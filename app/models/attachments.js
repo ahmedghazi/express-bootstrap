@@ -16,9 +16,7 @@ var AttachmentsSchema = new Schema({
 	path: String,
 	size: Number,
     title: String,
-    texte: String,
-    uploaded_by: {type: Schema.Types.ObjectId, ref: 'Users'},
-    comments: [{type: Schema.Types.ObjectId, ref: 'Comments'}],
+    texte: String
 },{
     timestamps: true
 });
